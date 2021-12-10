@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/CoinList.css";
 
 const CoinList = (props) => {
     const { image, name, current_price, rank, symbol, high24h, low24h } = props;
+
+    const [isModalShowing, setIsModalShowing] = useState(false);
+
+    const handleClick = () => {
+        setIsModalShowing(!isModalShowing);
+    };
 
     return (
         <div className="coinlist">
             <p>
                 {symbol}: <span>{name}</span>
                 <br />
-                <span>Market Cap Rank: {rank}</span>
+                <span>Market Rank: {rank}</span>
             </p>
             <img src={image} alt="crypto logo" />
-            <span>{current_price}</span>
+            <button onClick={handleClick}>Info</button>
         </div>
     );
 };
