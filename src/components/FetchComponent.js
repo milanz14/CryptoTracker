@@ -53,6 +53,8 @@ const FetchComponent = () => {
                                 rank={coin.market_cap_rank}
                                 high24h={coin.high_24h}
                                 low24h={coin.low_24h}
+                                price_change_24h={coin.price_change_24h}
+                                updated={coin.last_updated}
                             />
                         </li>
                     );
