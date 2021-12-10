@@ -16,7 +16,7 @@ const FetchComponent = () => {
     useEffect(() => {
         const fetchData = async () => {
             const res = await axios.get(BASE_URL);
-            console.log(res.data[0]);
+            // console.log(res.data[0]);
             sessionStorage.setItem("coins", JSON.stringify(res.data));
             setCoins(res.data);
         };
@@ -38,6 +38,7 @@ const FetchComponent = () => {
     return (
         <div className="fetchComponent">
             <h2>CryptoTracker</h2>
+            <div>{!coins && <h2>No Coins Found </h2>}</div>
             <SearchFilter filterCoins={filterCoins} />
             <ul>
                 {coins.map((coin) => {

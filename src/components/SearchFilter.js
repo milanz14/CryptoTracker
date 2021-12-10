@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/SearchFilter.css";
+import magnifying from "../assets/magnifying.png";
 
 const SearchFilter = (props) => {
     const { filterCoins } = props;

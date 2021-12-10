@@ -1,5 +1,35 @@
 .searchfilter {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+
+.searchfilter input {
+    margin-bottom: 15px;
+    width: 55vw;
+    height: 55px;
+    border-radius: 12px;
+}
+
+.searchfilter form {
+    position: relative;
+}
+
+.searchfilter button {
+    position: absolute;
+    float: right;
+    width: 55px;
+    height: 55px;
+    transform: translate(50%);
+}
+
+button img {
+    width: 55px;
+    height: 55px;
+}
+
+input[type="text"]::placeholder {
+    padding-left: 5px;
+    font-size: 15px;
 }
