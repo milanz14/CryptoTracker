@@ -4,7 +4,7 @@ See the latest and greatest goings on in the world of Crypto currency. Filter fo
 
 # Deployment
 
-`http://oceanic-need.surge.sh/`
+`https://cryptotracker-list.surge.sh/`
 
 ## Liability Waiver
 
