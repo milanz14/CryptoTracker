@@ -8,6 +8,12 @@
     top: 20px;
 }
 
+.coinlist .secondP {
+    position: absolute;
+    left: 300px;
+    top: 2px;
+}
+
 .coinlist img {
     position: absolute;
     left: 15px;
@@ -20,7 +26,9 @@
 .coinlist button {
     position: absolute;
     top: 50px;
-    /* left: 50%; */
+    right: 75px;
+    width: 100px;
+    height: 40px;
     transform: translate(-50%, -50%);
     border-radius: 8px;
     box-sizing: border-box;
@@ -30,7 +38,7 @@
     color: #90e0ef;
     cursor: pointer;
     margin: 0 0.3em 0.3em 0;
-    padding: 0.3em 1.2em;
+    padding: 0.1em 0.5em;
     border: none;
 }
 
