@@ -8,4 +8,4 @@ https://cryptotracker-list.surge.sh/
 
 ## Liability Waiver
 
-Crypo Tracker is not intended to be used for investment advice. Any investments made through using this App at your own sole discretion and the developer of this app is absolved from any possible losses that may result from your investments.
+Crypo Tracker is not intended to be used for investment advice. Any investments made through using this App's data at are your own sole discretion and the developer of this app is absolved from any possible losses that may result from your investments.
