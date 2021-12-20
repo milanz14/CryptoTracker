@@ -12,7 +12,6 @@ const CoinList = (props) => {
         high24h,
         low24h,
         price_change_24h,
-        updated,
     } = props;
 
     // const [isModalShowing, setIsModalShowing] = useState(false);

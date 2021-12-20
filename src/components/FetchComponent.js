@@ -3,6 +3,7 @@ import axios from "axios";
 import CoinList from "./CoinList";
 import "../styles/FetchComponent.css";
 import SearchFilter from "./SearchFilter";
+import { UnorderedList, ListItem } from "@chakra-ui/react";
 const BASE_URL =
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false";
 // const BASE_URL = 'https://api.coingecko.com/api/v3/'
@@ -40,10 +41,10 @@ const FetchComponent = () => {
             <h2>CryptoTracker</h2>
             <div>{!coins && <h2>No Coins Found </h2>}</div>
             <SearchFilter filterCoins={filterCoins} />
-            <ul>
+            <UnorderedList>
                 {coins.map((coin) => {
                     return (
-                        <li key={coin.id}>
+                        <ListItem key={coin.id}>
                             <CoinList
                                 id={coin.id}
                                 name={coin.name}
@@ -58,10 +59,10 @@ const FetchComponent = () => {
                                 }
                                 updated={coin.last_updated}
                             />
-                        </li>
+                        </ListItem>
                     );
                 })}
-            </ul>
+            </UnorderedList>
         </div>
     );
 };
