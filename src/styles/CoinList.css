@@ -45,5 +45,5 @@
 .coinlist .supplySpan {
     position: absolute;
     top: 40px;
-    right: 55px;
+    float: right;
 }
