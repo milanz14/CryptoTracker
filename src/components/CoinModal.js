@@ -15,7 +15,7 @@ const CoinModal = (props) => {
           <h1>{name}</h1>
         </div>
         <div clasName="modalBody">
-          <img src={image} />
+          <img src={image} alt="coin symbol" />
           <p>{currentPrice}</p>
           <p>{high24h}</p>
           <p>{low24h}</p>

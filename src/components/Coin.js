@@ -13,7 +13,7 @@ const Coin = (props) => {
   } = props;
 
   return (
-    <div className="coin">
+    <>
       <div className="img-div">
         <img src={image} alt="crypto logo" />
       </div>
@@ -22,16 +22,10 @@ const Coin = (props) => {
         <br />
         <span>Market Rank: {rank}</span>
       </div>
-      <div className="secondP">
+      <div>
         <span>Curent Price: {current_price}</span>
-        <br />
-        <span>24h High: {high24h}</span>
-        <br />
-        <span>24h Low: {low24h}</span>
-        <br />
-        <span>24h Change: {price_change_24h}</span>
       </div>
-    </div>
+    </>
   );
 };
 

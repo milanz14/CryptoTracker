@@ -21,11 +21,13 @@
 
 .list-container ul {
   margin-left: 0px;
+  min-width: 460px;
 }
 
 .fetchComponent li {
   list-style-type: none;
   border: 2px black solid;
+  width: 100%;
   margin-top: 2px;
   transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   background-color: #caf0f8;
