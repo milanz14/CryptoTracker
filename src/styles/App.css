@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
 .App {
   text-align: center;
   background: rgb(131, 58, 180);
@@ -8,4 +10,5 @@
   );
   padding: 0;
   min-height: 100vh;
+  font-family: "Ubunto Mono";
 }
