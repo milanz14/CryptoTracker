@@ -1,49 +1,62 @@
 .coinlist {
-    position: relative;
+  /* position: relative; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .coinlist p {
-    position: absolute;
-    left: 150px;
-    top: 20px;
+  position: absolute;
+  left: 150px;
+  top: 20px;
 }
 
-.coinlist .secondP {
-    position: absolute;
-    left: 300px;
-    top: 2px;
+.img-div {
+  display: flex;
+  flex-direction: column;
 }
 
-.coinlist img {
-    position: absolute;
-    left: 15px;
-    top: 22px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.img-div img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
-.coinlist button {
-    position: absolute;
-    top: 50px;
-    right: 75px;
-    width: 100px;
-    height: 40px;
-    transform: translate(-50%, -50%);
-    border-radius: 8px;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: inherit;
-    background-color: #0077b6;
-    color: #90e0ef;
-    cursor: pointer;
-    margin: 0 0.3em 0.3em 0;
-    padding: 0.1em 0.5em;
-    border: none;
+/* .coinlist .secondP {
+  position: absolute;
+  left: 300px;
+  top: 2px;
+} */
+
+/* .coinlist img {
+  position: absolute;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+} */
+
+/* .coinlist button {
+  position: absolute;
+  top: 50px;
+  right: 75px;
+  width: 100px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: inherit;
+  background-color: #0077b6;
+  color: #90e0ef;
+  cursor: pointer;
+  margin: 0 0.3em 0.3em 0;
+  padding: 0.1em 0.5em;
+  border: none;
 }
 
 .coinlist .supplySpan {
-    position: absolute;
-    top: 40px;
-    float: right;
-}
+  position: absolute;
+  top: 40px;
+  float: right;
+} */

@@ -14,13 +14,15 @@ const CoinList = (props) => {
 
   return (
     <div className="coinlist">
-      <p>
+      <div className="img-div">
+        <img src={image} alt="crypto logo" />
+      </div>
+      <div>
         {symbol}: <span>{name}</span>
         <br />
         <span>Market Rank: {rank}</span>
-      </p>
-      <img src={image} alt="crypto logo" />
-      <p className="secondP">
+      </div>
+      <div className="secondP">
         <span>Curent Price: {current_price}</span>
         <br />
         <span>24h High: {high24h}</span>
@@ -28,7 +30,7 @@ const CoinList = (props) => {
         <span>24h Low: {low24h}</span>
         <br />
         <span>24h Change: {price_change_24h}</span>
-      </p>
+      </div>
     </div>
   );
 };
