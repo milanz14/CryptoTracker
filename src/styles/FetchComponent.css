@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-top: 0;
   padding-top: 0;
   height: 100%;
@@ -12,6 +13,11 @@
   color: #0a8098;
   font-size: 4em;
   padding: 10px;
+}
+
+.fetchComponent h4 {
+  font-size: 2em;
+  align-self: center;
 }
 
 .list-container {
@@ -39,5 +45,13 @@
 @media (max-width: 376px) {
   .fetchComponent ul {
     width: 350px;
+  }
+
+  .fetchComponent h2 {
+    font-size: 2em;
+  }
+
+  .fetchComponent h4 {
+    font-size: 1em;
   }
 }

@@ -10,8 +10,7 @@ const SearchFilter = (props) => {
   };
   return (
     <div className="searchfilter">
-      <Input
-        variant="Outline"
+      <input
         type="text"
         onChange={handleChange}
         placeholder="Search Coins... "
