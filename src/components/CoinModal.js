@@ -6,8 +6,8 @@ const CoinModal = (props) => {
     props;
 
   return (
-    <div className="modalBackground">
-      <div className="modalContainer">
+    <div className="coinModal">
+      {/* <div className="modalContainer">
         <button className="titleCloseBtn" onClick={() => showModal(false)}>
           X
         </button>
@@ -24,7 +24,7 @@ const CoinModal = (props) => {
         <div clasName="modalFooter">
           <button onClick={() => showModal(false)}>Close</button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
