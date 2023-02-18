@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import CoinList from "./CoinList";
+// import CoinList from "./CoinList";
 import "../styles/FetchComponent.css";
 import SearchFilter from "./SearchFilter";
+// import {
+//   //   UnorderedList,
+//   //   ListItem,
+//   SimpleGrid,
+//   // Card,
+//   CardHeader,
+//   CardBody,
+//   Text,
+//   CardFooter,
+//   Button,
+// } from "@chakra-ui/react";
 import {
-  //   UnorderedList,
-  //   ListItem,
   SimpleGrid,
+  Text,
   Card,
   CardHeader,
   CardBody,
-  Text,
   CardFooter,
   Button,
 } from "@chakra-ui/react";
