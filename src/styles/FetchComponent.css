@@ -1,12 +1,15 @@
 .fetchComponent {
-  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 0;
   padding-top: 0;
   height: 100%;
 }
 
 .fetchComponent h2 {
-  color: #48cae4;
+  color: #0a8098;
   font-size: 4em;
   padding: 10px;
 }
