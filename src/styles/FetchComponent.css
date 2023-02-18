@@ -21,7 +21,7 @@
 
 .list-container ul {
   margin-left: 0px;
-  min-width: 460px;
+  width: 460px;
 }
 
 .fetchComponent li {
@@ -34,4 +34,10 @@
   border-radius: 15px;
   height: 100px;
   color: #0077b6;
+}
+
+@media (max-width: 376px) {
+  .fetchComponent ul {
+    width: 350px;
+  }
 }
