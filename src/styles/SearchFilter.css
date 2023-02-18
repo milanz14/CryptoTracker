@@ -6,8 +6,11 @@
   border-radius: 12px;
 }
 
-input[type="text"]::placeholder {
-  font-size: 15px;
+input {
+  text-align: center;
+}
+
+::placeholder {
   font-size: 1.5rem;
 }
 
