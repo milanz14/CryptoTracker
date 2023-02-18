@@ -1,6 +1,6 @@
-import "../styles/CoinList.css";
+import "../styles/Coin.css";
 
-const CoinList = (props) => {
+const Coin = (props) => {
   const {
     image,
     name,
@@ -13,7 +13,7 @@ const CoinList = (props) => {
   } = props;
 
   return (
-    <div className="coinlist">
+    <div className="coin">
       <div className="img-div">
         <img src={image} alt="crypto logo" />
       </div>
@@ -35,4 +35,4 @@ const CoinList = (props) => {
   );
 };
 
-export default CoinList;
+export default Coin;

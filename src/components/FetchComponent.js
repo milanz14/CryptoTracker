@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import CoinList from "./CoinList";
+import Coin from "./Coin";
 import "../styles/FetchComponent.css";
 import SearchFilter from "./SearchFilter";
 import { UnorderedList, ListItem, Text } from "@chakra-ui/react";
@@ -44,12 +44,12 @@ const FetchComponent = () => {
       </Text>
       <div>{!coins && <h2>No Coins Found </h2>}</div>
       <SearchFilter filterCoins={filterCoins} />
-      <div>
+      <div className="list-container">
         <UnorderedList>
           {coins.map((coin) => {
             return (
               <ListItem key={coin.id}>
-                <CoinList
+                <Coin
                   id={coin.id}
                   name={coin.name}
                   symbol={coin.symbol}

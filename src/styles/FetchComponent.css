@@ -14,14 +14,20 @@
   padding: 10px;
 }
 
+.list-container {
+  display: flex;
+  justify-content: center;
+}
+
+.list-container ul {
+  margin-left: 0px;
+}
+
 .fetchComponent li {
   list-style-type: none;
   border: 2px black solid;
   margin-top: 2px;
   transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-  width: 55vw;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #caf0f8;
   border-radius: 15px;
   height: 100px;
