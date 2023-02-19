@@ -1,5 +1,5 @@
 .searchfilter input {
-  width: 440px;
+  width: 500px;
   margin-top: 15px;
   margin-bottom: 15px;
   height: 55px;
@@ -14,10 +14,11 @@ input {
 }
 
 ::placeholder {
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-family: "Ubunto Mono";
 }
 
-@media (max-width: 460px) {
+@media (max-width: 510px) {
   .searchfilter input {
     width: 350px;
   }

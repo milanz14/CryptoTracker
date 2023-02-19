@@ -10,13 +10,14 @@
 }
 
 .fetchComponent h2 {
-  color: #0a8098;
-  font-size: 4em;
+  color: #eeeeee;
+  font-size: 2em;
   padding: 10px;
 }
 
 .fetchComponent h4 {
-  font-size: 2em;
+  color: #eeeeee;
+  font-size: 20px;
   align-self: center;
 }
 
@@ -30,7 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 440px;
+  width: 500px;
 }
 
 .fetchComponent li {
@@ -44,7 +45,7 @@
   color: #0077b6;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 510px) {
   .fetchComponent ul {
     width: 350px;
   }
