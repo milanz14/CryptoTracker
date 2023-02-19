@@ -25,18 +25,18 @@ const CoinModal = (props) => {
   }, [id]);
 
   return (
-    <div className="modalBackground">
+    <div className="modal-background">
       {!isDataLoaded && <Spinner />}
-      <div className="modalContainer">
+      <div className="modal-container">
         <button
-          className="titleCloseBtn"
+          className="title-close-btn"
           onClick={() => setIsModalShowing((prev) => !prev)}>
-          X
+          &times;
         </button>
-        <div className="modalTitle">
+        <div className="modal-title">
           <h1>{name}</h1>
         </div>
-        <div className="modalBody">lorem80</div>
+        <div className="modal-body">lorem80</div>
       </div>
     </div>
   );
