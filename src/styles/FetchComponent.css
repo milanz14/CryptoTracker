@@ -27,7 +27,9 @@
 }
 
 .list-container ul {
-  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 440px;
 }
 
@@ -36,7 +38,6 @@
   border: 2px black solid;
   width: 100%;
   margin-top: 2px;
-  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   background-color: #caf0f8;
   border-radius: 15px;
   height: 100px;
