@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/SearchFilter.css";
-import { Input } from "@chakra-ui/react";
 
 const SearchFilter = (props) => {
   const { filterCoins } = props;

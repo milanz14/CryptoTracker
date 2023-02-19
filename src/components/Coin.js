@@ -12,6 +12,10 @@ const Coin = (props) => {
     price_change_24h,
   } = props;
 
+  const handleCoinModal = () => {
+    console.log("clicked more button");
+  };
+
   return (
     <div className="coin">
       <div className="img-div">
@@ -22,10 +26,10 @@ const Coin = (props) => {
         <br />
         <span>Market Rank: {rank}</span>
       </div>
-      <div clasName="info-container">
+      <div className="info-container">
         <div>{current_price.toFixed(2)} USD</div>
         <div className="btn-container">
-          <button>More</button>
+          <button onClick={handleCoinModal}>More</button>
         </div>
       </div>
     </div>
