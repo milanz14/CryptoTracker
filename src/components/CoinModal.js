@@ -1,19 +1,32 @@
-import React from "react";
+import { useState, useEffect } from "react";
+
 import "../styles/CoinModal.css";
 
+import axios from "axios";
+
+import Spinner from "./Spinner";
+
 const CoinModal = (props) => {
-  const {
-    currentPrice,
-    high24h,
-    low24h,
-    priceChange,
-    name,
-    image,
-    setIsModalShowing,
-  } = props;
+  const { id, name, setIsModalShowing } = props;
+
+  const [coinPrices, setCoinPrices] = useState(null);
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get(
+        `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=USD&days=30&interval=daily`
+      );
+      // console.log(res.data.prices);
+      setIsDataLoaded(true);
+      return setCoinPrices(res.data.prices);
+    };
+    return fetchData();
+  }, [id]);
 
   return (
     <div className="modalBackground">
+      {!isDataLoaded && <Spinner />}
       <div className="modalContainer">
         <button
           className="titleCloseBtn"
@@ -23,19 +36,7 @@ const CoinModal = (props) => {
         <div className="modalTitle">
           <h1>{name}</h1>
         </div>
-        <div className="modalBody">
-          {/* <img src={image} alt="coin symbol" />
-          <p>{currentPrice}</p>
-          <p>{high24h}</p>
-          <p>{low24h}</p>
-          <p>{priceChange}</p> */}
-          <p>TEMP MODAL</p>
-        </div>
-        <div className="modalFooter">
-          <button onClick={() => setIsModalShowing((prev) => !prev)}>
-            Close
-          </button>
-        </div>
+        <div className="modalBody">lorem80</div>
       </div>
     </div>
   );

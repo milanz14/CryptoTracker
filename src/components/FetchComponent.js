@@ -22,7 +22,6 @@ const FetchComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(BASE_URL);
-      // console.log(res.data[0]);
       sessionStorage.setItem("coins", JSON.stringify(res.data));
       setCoins(res.data);
       setIsDataLoaded(true);
@@ -45,7 +44,7 @@ const FetchComponent = () => {
   return (
     <div className="fetchComponent">
       <h2>CryptoTracker</h2>
-      <h4 className="text">Info on everything Crypto!</h4>
+      <h4 className="text">Info on Crypto!</h4>
       <div>{!coins && <h2>No Coins Found </h2>}</div>
       <SearchFilter filterCoins={filterCoins} />
       {!isDataLoaded && <Spinner />}

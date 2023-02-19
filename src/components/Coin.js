@@ -25,9 +25,6 @@ const Coin = (props) => {
 
   return (
     <div className="coin">
-      {isModalShowing && (
-        <CoinModal setIsModalShowing={setIsModalShowing} id={id} />
-      )}
       <div className="img-div">
         <img src={image} alt="crypto logo" />
       </div>
@@ -42,6 +39,9 @@ const Coin = (props) => {
           <button onClick={handleCoinModal}>More</button>
         </div>
       </div>
+      {isModalShowing && (
+        <CoinModal setIsModalShowing={setIsModalShowing} id={id} />
+      )}
     </div>
   );
 };
