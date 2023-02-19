@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+
 import axios from "axios";
+
 import Coin from "./Coin";
-import "../styles/FetchComponent.css";
 import SearchFilter from "./SearchFilter";
+import Spinner from "./Spinner";
+
+import "../styles/FetchComponent.css";
 
 const BASE_URL =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false";
@@ -13,6 +17,7 @@ const BASE_URL =
 const FetchComponent = () => {
   const INITIAL_STATE = [];
   const [coins, setCoins] = useState(INITIAL_STATE);
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +25,7 @@ const FetchComponent = () => {
       // console.log(res.data[0]);
       sessionStorage.setItem("coins", JSON.stringify(res.data));
       setCoins(res.data);
+      setIsDataLoaded(true);
     };
     fetchData();
   }, []);
@@ -42,6 +48,7 @@ const FetchComponent = () => {
       <h4 className="text">Info on everything Crypto!</h4>
       <div>{!coins && <h2>No Coins Found </h2>}</div>
       <SearchFilter filterCoins={filterCoins} />
+      {!isDataLoaded && <Spinner />}
       <div className="list-container">
         <ul>
           {coins.map((coin) => (
