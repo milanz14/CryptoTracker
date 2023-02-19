@@ -23,6 +23,7 @@
 .list-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .list-container ul {
