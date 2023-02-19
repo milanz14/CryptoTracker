@@ -39,9 +39,7 @@ const FetchComponent = () => {
   return (
     <div className="fetchComponent">
       <h2>CryptoTracker</h2>
-      <h4 className="text">
-        Get all of the latest and greatest in Crypto Currency!
-      </h4>
+      <h4 className="text">Info on everything Crypto!</h4>
       <div>{!coins && <h2>No Coins Found </h2>}</div>
       <SearchFilter filterCoins={filterCoins} />
       <div className="list-container">

@@ -22,8 +22,11 @@ const Coin = (props) => {
         <br />
         <span>Market Rank: {rank}</span>
       </div>
-      <div>
-        <span>Curent Price: {current_price}</span>
+      <div clasName="info-container">
+        <div>{current_price.toFixed(2)} USD</div>
+        <div className="btn-container">
+          <button>More</button>
+        </div>
       </div>
     </div>
   );

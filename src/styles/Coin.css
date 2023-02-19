@@ -10,3 +10,27 @@
   height: 50px;
   border-radius: 50%;
 }
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container div {
+  width: 100px;
+  height: 60px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: end;
+  width: 100px;
+}
+
+.btn-container button {
+  margin-top: 15px;
+}
+
+button {
+  width: 75px;
+}

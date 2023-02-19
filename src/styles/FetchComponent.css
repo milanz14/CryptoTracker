@@ -24,7 +24,11 @@
 .list-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  width: 550px;
+  max-height: 75vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 .list-container ul {
