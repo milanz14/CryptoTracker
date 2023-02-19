@@ -25,7 +25,7 @@ const CoinModal = (props) => {
   }, [id]);
 
   return (
-    <div className="modal-background">
+    <>
       {!isDataLoaded && <Spinner />}
       <div className="modal-container">
         <button
@@ -38,7 +38,8 @@ const CoinModal = (props) => {
         </div>
         <div className="modal-body">lorem80</div>
       </div>
-    </div>
+      <div className="modal-overlay"></div>
+    </>
   );
 };
 
