@@ -1,7 +1,11 @@
 import "../styles/Coin.css";
+import CoinModal from "./CoinModal";
+
+import { useState } from "react";
 
 const Coin = (props) => {
   const {
+    id,
     image,
     name,
     current_price,
@@ -12,12 +16,18 @@ const Coin = (props) => {
     price_change_24h,
   } = props;
 
+  const [isModalShowing, setIsModalShowing] = useState(false);
+
   const handleCoinModal = () => {
-    console.log("clicked more button");
+    console.log(id);
+    setIsModalShowing((prev) => !prev);
   };
 
   return (
     <div className="coin">
+      {isModalShowing && (
+        <CoinModal setIsModalShowing={setIsModalShowing} id={id} />
+      )}
       <div className="img-div">
         <img src={image} alt="crypto logo" />
       </div>
