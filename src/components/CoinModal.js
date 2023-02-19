@@ -5,6 +5,7 @@ import "../styles/CoinModal.css";
 import axios from "axios";
 
 import Spinner from "./Spinner";
+import ChartComponent from "./ChartComponent";
 
 const CoinModal = (props) => {
   const { id, name, setIsModalShowing } = props;
@@ -28,6 +29,7 @@ const CoinModal = (props) => {
     <>
       {!isDataLoaded && <Spinner />}
       <div className="modal-container">
+        <ChartComponent priceData={coinPrices} />
         <button
           className="title-close-btn"
           onClick={() => setIsModalShowing((prev) => !prev)}>
