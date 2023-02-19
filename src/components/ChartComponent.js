@@ -6,8 +6,10 @@ const ChartComponent = (props) => {
   const { priceData } = props;
   const [pricing30Days, setPricing30Days] = useState([]);
 
-  const newData = priceData.map((price) => price[1]);
-  setPricing30Days(...newData);
+  if (priceData) {
+    const newData = priceData.map((price) => price[1]);
+    setPricing30Days(...newData);
+  }
 
   // const data = [["x"], ...pricing30Days];
 

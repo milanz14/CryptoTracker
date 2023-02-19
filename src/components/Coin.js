@@ -4,17 +4,7 @@ import CoinModal from "./CoinModal";
 import { useState } from "react";
 
 const Coin = (props) => {
-  const {
-    id,
-    image,
-    name,
-    current_price,
-    rank,
-    symbol,
-    high24h,
-    low24h,
-    price_change_24h,
-  } = props;
+  const { id, image, name, current_price, rank, symbol } = props;
 
   const [isModalShowing, setIsModalShowing] = useState(false);
 
