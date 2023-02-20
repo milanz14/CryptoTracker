@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import { Chart } from "react-google-charts";
-
 const ChartComponent = (props) => {
   const { coinPrices } = props;
 
