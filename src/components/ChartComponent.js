@@ -1,31 +1,20 @@
 import { useState } from "react";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
 
 const ChartComponent = (props) => {
   const { coinPrices } = props;
 
-  const data = [["x"], ...coinPrices];
-
-  const options = {
-    hAxis: {
-      title: "Last 30 days",
-    },
-    vAxis: {
-      title: "Price",
-    },
-    series: {
-      1: { curveType: "function" },
-    },
-  };
-
-  return (
-    <Chart
-      chartType="LineChart"
-      width="100%"
-      height="400px"
-      data={data}
-      options={options}
-    />
-  );
+  return <>This is where the chart will go.</>;
 };
 
 export default ChartComponent;

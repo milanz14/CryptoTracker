@@ -11,7 +11,7 @@ const CoinModal = (props) => {
   const [coinPrices, setCoinPrices] = useState(null);
 
   useEffect(() => {
-    const extractedDailyPrices = priceData.map((priceD) => priceD[1]);
+    const extractedDailyPrices = priceData.map((price) => price[1].toFixed(3));
     console.log(extractedDailyPrices);
     setCoinPrices(extractedDailyPrices);
   }, [priceData]);
