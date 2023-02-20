@@ -58,6 +58,7 @@ const FetchComponent = () => {
                 image={coin.image}
                 current_price={coin.current_price}
                 rank={coin.market_cap_rank}
+                symbol={coin.symbol}
               />
             </li>
           ))}
