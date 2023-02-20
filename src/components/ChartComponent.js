@@ -4,11 +4,11 @@ import { Chart } from "react-google-charts";
 
 const ChartComponent = (props) => {
   const { priceData } = props;
-  const [pricing30Days, setPricing30Days] = useState([]);
+  const [lastThirtyDays, setLastThirtyDays] = useState([]);
 
   if (priceData) {
     const newData = priceData.map((price) => price[1]);
-    setPricing30Days(...newData);
+    setLastThirtyDays(...newData);
   }
 
   // const data = [["x"], ...pricing30Days];
