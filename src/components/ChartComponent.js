@@ -3,39 +3,30 @@ import { useState } from "react";
 import { Chart } from "react-google-charts";
 
 const ChartComponent = (props) => {
-  const { priceData } = props;
-  const [lastThirtyDays, setLastThirtyDays] = useState([]);
+  const { coinPrices } = props;
 
-  if (priceData) {
-    const newData = priceData.map((price) => price[1]);
-    setLastThirtyDays(...newData);
-  }
+  const data = [["x"], ...coinPrices];
 
-  // const data = [["x"], ...pricing30Days];
-
-  // const options = {
-  //   hAxis: {
-  //     title: "Last 30 days",
-  //   },
-  //   vAxis: {
-  //     title: "Price",
-  //   },
-  //   series: {
-  //     1: { curveType: "function" },
-  //   },
-  // };
-
-  console.log(priceData);
+  const options = {
+    hAxis: {
+      title: "Last 30 days",
+    },
+    vAxis: {
+      title: "Price",
+    },
+    series: {
+      1: { curveType: "function" },
+    },
+  };
 
   return (
-    // <Chart
-    //   chartType="LineChart"
-    //   width="100%"
-    //   height="400px"
-    //   data={data}
-    //   options={options}
-    // />
-    <div>Chart</div>
+    <Chart
+      chartType="LineChart"
+      width="100%"
+      height="400px"
+      data={data}
+      options={options}
+    />
   );
 };
 

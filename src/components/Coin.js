@@ -14,7 +14,7 @@ const Coin = (props) => {
 
   const handleCoinModal = async () => {
     const res = await axios.get(
-      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=USD&days=30`
+      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=USD&days=15`
     );
     setPriceData(res.data.prices);
     setIsModalShowing((prev) => !prev);
@@ -40,6 +40,7 @@ const Coin = (props) => {
         <CoinModal
           setIsModalShowing={setIsModalShowing}
           priceData={priceData}
+          name={name}
         />
       )}
     </div>
