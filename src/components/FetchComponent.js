@@ -55,14 +55,10 @@ const FetchComponent = () => {
               <Coin
                 id={coin.id}
                 name={coin.name}
-                symbol={coin.symbol}
                 image={coin.image}
                 current_price={coin.current_price}
                 rank={coin.market_cap_rank}
-                high24h={coin.high_24h}
-                low24h={coin.low_24h}
-                price_change_24h={coin.price_change_percentage_24h}
-                updated={coin.last_updated}
+                symbol={coin.symbol}
               />
             </li>
           ))}

@@ -1,25 +1,27 @@
-import "../styles/Coin.css";
-import CoinModal from "./CoinModal";
-
 import { useState } from "react";
 
+import axios from "axios";
+
+import CoinModal from "./CoinModal";
+
+import "../styles/Coin.css";
+
 const Coin = (props) => {
-  const {
-    id,
-    image,
-    name,
-    current_price,
-    rank,
-    symbol,
-    high24h,
-    low24h,
-    price_change_24h,
-  } = props;
+  const { id, image, name, current_price, rank, symbol } = props;
 
   const [isModalShowing, setIsModalShowing] = useState(false);
+  const [priceData, setPriceData] = useState([]);
+  const [coinDescription, setCoinDescription] = useState("");
 
-  const handleCoinModal = () => {
-    console.log(id);
+  const handleCoinModal = async () => {
+    const res = await axios.get(
+      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=USD&days=30&interval=daily`
+    );
+    const descRes = await axios.get(
+      `https://api.coingecko.com/api/v3/coins/${id}`
+    );
+    setPriceData(res.data.prices);
+    setCoinDescription(descRes.data.description.en);
     setIsModalShowing((prev) => !prev);
   };
 
@@ -39,8 +41,13 @@ const Coin = (props) => {
           <button onClick={handleCoinModal}>More</button>
         </div>
       </div>
-      {isModalShowing && (
-        <CoinModal setIsModalShowing={setIsModalShowing} id={id} />
+      {isModalShowing && priceData && coinDescription && (
+        <CoinModal
+          setIsModalShowing={setIsModalShowing}
+          description={coinDescription}
+          priceData={priceData}
+          name={name}
+        />
       )}
     </div>
   );
