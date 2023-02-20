@@ -11,12 +11,17 @@ const Coin = (props) => {
 
   const [isModalShowing, setIsModalShowing] = useState(false);
   const [priceData, setPriceData] = useState([]);
+  const [coinDescription, setCoinDescription] = useState("");
 
   const handleCoinModal = async () => {
     const res = await axios.get(
-      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=USD&days=15`
+      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=USD&days=30&interval=daily`
+    );
+    const descRes = await axios.get(
+      `https://api.coingecko.com/api/v3/coins/${id}`
     );
     setPriceData(res.data.prices);
+    setCoinDescription(descRes.data.description.en);
     setIsModalShowing((prev) => !prev);
   };
 
@@ -36,9 +41,10 @@ const Coin = (props) => {
           <button onClick={handleCoinModal}>More</button>
         </div>
       </div>
-      {isModalShowing && priceData && (
+      {isModalShowing && priceData && coinDescription && (
         <CoinModal
           setIsModalShowing={setIsModalShowing}
+          description={coinDescription}
           priceData={priceData}
           name={name}
         />
